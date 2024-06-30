@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.mapa-asientos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.asiento {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    background-color: green;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    transition: transform 0.2s;
+    
+}
+.asiento:hover {
+    background-color: silver;
+    color: green;
+    transform:scale3d(1.09,1.09,1)
+
+
+}
+
+.asiento.reserved {
+    background-color: red;
+    color: white;
+    cursor: not-allowed;
+}
+.asiento.reserved:hover {
+    transform: scale3d(0.95,0.95,1)
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label, form input {
+    margin: 5px;
+}
+
+button {
+    margin-top: 20px;
+}
+
+#pasajeros-list {
+    margin-top: 20px;
+    text-align: center;
+}
+.contenedorbvp {
+    text-align: center;
+}

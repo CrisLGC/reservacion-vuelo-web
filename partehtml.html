@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservación de Vuelo</title>
+    <link rel="stylesheet" href="partecss.css">
+</head>
+<body>
+    <h1>Reservación de boleto para vuelo</h1>
+    <div class="mapa-asientos">
+        <div class="asiento" id="31C">31C</div>
+        <div class="asiento" id="31D">31D</div>
+        <div class="asiento" id="31E">31E</div>
+        <div class="asiento" id="31F">31F</div>
+        <div class="asiento" id="31G">31G</div>
+    </div>
+    <div class="mapa-asientos">
+        <div class="asiento" id="32A">32A</div>
+        <div class="asiento" id="32B">32B</div>
+        <div class="aisle">-----</div>
+        <div class="asiento" id="32C">32C</div>
+        <div class="asiento" id="32D">32D</div>
+        <div class="asiento" id="32E">32E</div>
+        <div class="asiento" id="32F">32F</div>
+        <div class="asiento" id="32G">32G</div>
+        <div class="aisle">-----</div>
+        <div class="asiento" id="32H">32H</div>
+        <div class="asiento" id="32J">32J</div>
+    </div>
+    <!-- Más asientos aquí según la imagen proporcionada -->
+
+    <form id="reservacion-form">
+        <h2>Reservar Asiento</h2>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required>
+        <label for="asiento">Asiento:</label>
+        <input type="text" id="asiento" required>
+        <label for="equipaje-mano">Equipaje de Mano:</label>
+        <input type="checkbox" id="equipaje-mano">
+        <label for="equipaje-bodega">Equipaje de Bodega:</label>
+        <input type="checkbox" id="equipaje-bodega">
+        <button type="submit">Reservar</button>
+    </form>
+    <div class="contenedorbvp">
+        <button id="ver-pasajeros">Ver Pasajeros</button>
+    </div>
+    <div id="pasajeros-list"></div>
+
+    <script src="partejs.js"></script>
+</body>
+</html>
