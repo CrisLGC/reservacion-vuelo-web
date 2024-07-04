@@ -1,10 +1,13 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     const asientos = document.querySelectorAll('.asiento');
+    const asientosvip = document.querySelectorAll('.asiento-vip');
+    const asientosbs = document.querySelectorAll('.asiento-bussines');
     const reservacionForm = document.getElementById('reservacion-form');
     const cancelForm = document.getElementById('cancel-form');
     const botonVerpasajeros = document.getElementById('ver-pasajeros');
     const pasajerosList = document.getElementById('pasajeros-list');
+    const bppago = document.getElementById('ppago');
 
     let pasajeros = [];
     
@@ -18,6 +21,30 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+    asientosvip.forEach(asientovip => {
+        asientovip.addEventListener('click', () => {
+            if (!asientovip.classList.contains('reserved')) {
+                document.getElementById('asiento').value = asientovip.id;
+            }
+            else{
+                document.getElementById('cancel-asiento').value = asientovip.id;
+            }
+        });
+    });
+    asientosbs.forEach(asientobs => {
+        asientobs.addEventListener('click', () => {
+            if (!asientobs.classList.contains('reserved')) {
+                document.getElementById('asiento').value = asientobs.id;
+            }
+            else{
+                document.getElementById('cancel-asiento').value = asientobs.id;
+            }
+        });
+    });
+
+
+
+
 
     reservacionForm.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -31,6 +58,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const phone = document.getElementById('phone').value;
         const email = document.getElementById('email').value;
         const nacionalidad = document.getElementById('nacionalidad').value;
+        const asientoclass = document.getElementById('asiento').className;
+        let precio = 105.00;
+
+
+
+
+
 
         const nameRegex = /^[a-zA-Z\s]+$/;
         if (!nameRegex.test(primernom)) {
@@ -98,14 +132,23 @@ document.addEventListener('DOMContentLoaded', () => {
         const asiento = document.getElementById(asientoId);
         if (asiento && !asiento.classList.contains('reserved')) {
             asiento.classList.add('reserved');
-            pasajeros.push({ primernom, primerape, asientoId, equipajemano, equipajebodega });
+            pasajeros.push({ primernom, primerape, asientoId, equipajemano, equipajebodega, precio});
             alert(`Asiento ${asientoId} reservado para ${primernom+" "+primerape}`);
             document.getElementById('primer-nom').value = "";
+            document.getElementById('primer-ape').value = "";
+            document.getElementById('fdn').value = "";
+            document.getElementById('phone').value = "";
+            document.getElementById('email').value = "";
+            document.getElementById('genero').value = ""
+            document.getElementById('nacionalidad').value=""
             document.getElementById('asiento').value = "";
             document.getElementById('equipaje-mano').checked = false;
             document.getElementById('equipaje-bodega').checked = false;
-            pasajerosList.innerHTML = ""
-            window.location.href = "payment gateway/index.html"; 
+            pasajerosList.innerHTML = "";
+            bppago.addEventListener('click', () =>{
+                window.location.href = "payment gateway/index.html";
+            });
+
         } else {
             alert('Asiento no disponible o reservado');
             document.getElementById('primer-nom').value = "";
@@ -131,10 +174,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     botonVerpasajeros.addEventListener('click', () => {
         pasajerosList.innerHTML = '<h2>Lista de Pasajeros</h2>';
+        let total = 0;
         pasajeros.forEach(pasajero => {
-            pasajerosList.innerHTML += `<p>${pasajero.primernom} ${pasajero.primerape} - ${pasajero.asientoId}</p>`;
+            pasajerosList.innerHTML += `<p>${pasajero.primernom} ${pasajero.primerape} - ${pasajero.asientoId} - ${pasajero.precio}.00$ </p>`;
+            total += pasajero.precio;
         });
+        pasajerosList.innerHTML += `<div>Total a pagar: ${total}.00$</div>`;
+
     });
+
 });
 window.onload = function(){
     alert('he cargado la pagina');

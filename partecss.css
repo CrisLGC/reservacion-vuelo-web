@@ -1,9 +1,10 @@
 body {
     font-family: Arial, sans-serif;
-    background-image: url('./banner-bg.jpg'); /* Reemplaza con la ruta de tu imagen */
+    background-image: url(''); /* Reemplaza con la ruta de tu imagen */
     background-size: cover; /* Ajusta el tamaño para cubrir todo el fondo */
     background-repeat: no-repeat; /* Evita que se repita la imagen */
     background-position: center center; /* Centra la imagen en el fondo */
+    background-color: rgb(199, 173, 134);
 }
 
 h1, h2 {
@@ -12,16 +13,39 @@ h1, h2 {
 
 .mapa-asientos {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    margin: 20px;
+    background-color: black;
+    opacity:0.55;
+    position: relative;
+    top: 50px ;
+    left: 650px;
     
 
 }
 .form-container {
-    background-color: aliceblue;
+    justify-content: center;
+    width: 300px;
+    height: 750px;
+    background-color:black;
     opacity: 0.55;
+    display: flex;
+    margin-top: 0px;
+    margin-left: 50px;
+    margin-bottom: 300px;
+    position: relative;
+    top: -400px;
+    left: 25px;
+    padding: 20px;
+    color: white;
 
+
+}
+.caja-asientos {
+    width: 400px;
+    height: 400px;
+    margin: 50px;
+    border: 1px;  
+    position: relative;
+    right: 250px;    
 }
 
 .asiento {
@@ -47,20 +71,74 @@ h1, h2 {
     background-color: silver;
     color: green;
     transform:scale3d(1.09,1.09,1)
-
-
 }
 
 .asiento.reserved {
-    background-color: red;
-    color: white;
+    background-color: grey;
+    color: black
 }
 .asiento.reserved:hover {
     transform: scale3d(0.95,0.95,1)
 }
+.asiento-vip{
+    width: 5px;
+    height: 5px;
+    margin: 5px;
+    padding: 13px;
+    font-size: 10px;
+    background-color: red;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    transition: transform 0.2s;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
 
+}
+.asiento-vip:hover {
+    background-color: white;
+    color:black;
+    transform:scale3d(1.09,1.09,1)
+
+
+}
+.asiento-vip.reserved{
+    background-color: grey;
+    color: black
+}
+.asiento-bussines{
+    width: 5px;
+    height: 5px;
+    margin: 5px;
+    padding: 13px;
+    font-size: 10px;
+    background-color: yellow;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    transition: transform 0.2s;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+
+}
+.asiento-bussines:hover {
+    background-color: white;
+    color:black;
+    transform:scale3d(1.09,1.09,1)
+}
+.asiento-bussines.reserved{
+    background-color: grey;
+    color: black
+}
 form {
     display: flex;
+    justify-content: flex-start;
     flex-direction: column;
     align-items: center;
 }
@@ -78,11 +156,31 @@ button {
     text-align: center;
 }
 .contenedorbvp {
+    height:425px;
+    width:250px ;
+    background-color: black;
+    opacity: 0.55;
     text-align: center;
+    position: relative;
+    top: -1690px;
+    left: 865px;
+    color: white;
 }
+.boton-cancelar{
+    height: 200px;
+    width: 400px; 
+    background-color: black;
+    opacity: 0.55;
+    position: relative;
+    top: -1050px;
+    left: 450px;
+    color: white;
+}
+
 
 .aisle{
     color:white ;
     opacity: 0;
 
 }
+
