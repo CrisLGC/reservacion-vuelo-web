@@ -75,7 +75,20 @@ document.addEventListener('DOMContentLoaded', () => {
         let precio = 105.00;
         const flightType= flightTypeSelect.value;
         if (flightType === 'ida-vuelta') {
-            precio = precio*2
+            precio = precio*2;
+            const returnDate = returnDateInput.value;
+            const today = new Date();
+            const returnDateObj = new Date(returnDate);
+
+            if (returnDateObj < today.setHours(0, 0, 0, 0)) {
+                alert("La fecha de regreso no puede ser anterior a hoy.");
+                return;
+            }
+
+            if (!returnDate) {
+                alert("Por favor, seleccione una fecha de regreso.");
+                return;
+            }
         }
 
         const nameRegex = /^[a-zA-Z\s]+$/;
