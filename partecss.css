@@ -18,7 +18,6 @@ h1, h2 {
     position: relative;
     top: 50px ;
     left: 650px;
-    box-shadow: 0 10px 25px black;
     
 
 }
@@ -26,8 +25,8 @@ h1, h2 {
     justify-content: center;
     width: 300px;
     height: 750px;
-    background-color:black;
-    opacity: 0.55;
+    background-color: black;
+    opacity: 0.55 ;
     display: flex;
     margin-top: 0px;
     margin-left: 50px;
@@ -37,8 +36,7 @@ h1, h2 {
     left: 25px;
     padding: 20px;
     color: white;
-    box-shadow: 0 10px 15px black;
-
+    border-radius: 6px;
 
 }
 .caja-asientos {
@@ -47,7 +45,8 @@ h1, h2 {
     margin: 50px;
     border: 1px;  
     position: relative;
-    right: 250px;    
+    right: 250px;   
+    top: 150px; 
 }
 
 .asiento {
@@ -158,7 +157,7 @@ button {
     text-align: center;
 }
 .contenedorbvp {
-    height:425px;
+    height:325px;
     width:250px ;
     background-color: black;
     opacity: 0.55;
@@ -167,18 +166,16 @@ button {
     top: -1690px;
     left: 865px;
     color: white;
-    box-shadow: 0 10px 15px black;
 }
 .boton-cancelar{
-    height: 200px;
+    height: 210px;
     width: 400px; 
     background-color: black;
     opacity: 0.55;
     position: relative;
-    top: -1050px;
+    top: -917px;
     left: 450px;
     color: white;
-    box-shadow: 0 10px 15px black;
 }
 
 
@@ -186,5 +183,21 @@ button {
     color:white ;
     opacity: 0;
 
+}
+.leyenda{
+    display: flex;
+    width: 400px ;
+    height:150px ;
+    background-color: black;
+    opacity: 0.55;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; 
+    bottom: 2025px;
+    left: 450px;
+    border-radius: 60px  60px 0 0;
+}
+ul li{
+    display: inline-block;
 }
 
