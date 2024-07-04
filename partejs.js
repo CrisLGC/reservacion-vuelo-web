@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
     const asientos = document.querySelectorAll('.asiento');
     const reservacionForm = document.getElementById('reservacion-form');
@@ -6,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const pasajerosList = document.getElementById('pasajeros-list');
 
     let pasajeros = [];
-
+    
     asientos.forEach(asiento => {
         asiento.addEventListener('click', () => {
             if (!asiento.classList.contains('reserved')) {
@@ -104,6 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('equipaje-mano').checked = false;
             document.getElementById('equipaje-bodega').checked = false;
             pasajerosList.innerHTML = ""
+            window.location.href = "payment gateway/index.html"; 
         } else {
             alert('Asiento no disponible o reservado');
             document.getElementById('primer-nom').value = "";
