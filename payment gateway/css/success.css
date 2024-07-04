@@ -1,14 +1,14 @@
 body {
   font-family: Arial, sans-serif;
   text-align: center;
-  background-color: #00ad13;
+  background-color: black;
 }
 
 .fa-circle-check {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: rgb(149, 255, 149);
   font-size: 8em;
   margin-top: 15%;
 }

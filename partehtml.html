@@ -36,7 +36,7 @@
         <div class="asiento-vip" id="31D">31D</div>
         <div class="aisle">--------</div>
         <div class="asiento-vip" id="31E">31E</div>
-        <div class="aisle">--------</div>
+        <div class="aisle">-------</div>
         <div class="asiento-vip" id="31F">31F</div>
         <div class="aisle">------------------</div>
         <div class="asiento-vip" id="31J">31J</div>
@@ -55,8 +55,6 @@
         <div class="asiento-vip" id="32J">32J</div>
     </div>
     <div class="mapa-asientos">
-
-
         <div class="asiento-vip" id="33C">33C</div>
         <div class="aisle">------------------</div>
         <div class="asiento-vip" id="33D">33D</div>
@@ -82,13 +80,13 @@
     <div class="mapa-asientos">
         <div class="asiento-bussines" id="35A">35A</div>
         <div class="asiento-bussines" id="35B">35B</div>
-        <div class="aisle">-----</div>
+        <div class="aisle">----</div>
         <div class="asiento-bussines" id="35C">35C</div>
         <div class="asiento-bussines" id="35D">35D</div>
         <div class="asiento-bussines" id="35E">35E</div>
         <div class="asiento-bussines" id="35F">35F</div>
         <div class="asiento-bussines" id="35G">35G</div>
-        <div class="aisle">-----</div>
+        <div class="aisle">----</div>
         <div class="asiento-bussines" id="35H">35H</div>
         <div class="asiento-bussines" id="35J">35J</div>
     </div>
@@ -154,6 +152,11 @@
         <div class="form-container">
             <form id="reservacion-form">
                 <h2>Reservar Asiento</h2>
+                <label for="flight-type">Tipo de Vuelo:</label>
+                <select id="flight-type" required>
+                    <option value="vuelo-ida">Ida</option>
+                    <option value="ida-vuelta">Ida y Vuelta</option>
+                </select>
                 <label class="primer-Nombre" for="primer-nom">Primer Nombre:</label>
                 <input type="text" id="primer-nom" required>
                 <label for="primer-ape">Primer Apellido:</label>
@@ -381,6 +384,10 @@
                 <input type="checkbox" id="equipaje-mano">
                 <label for="equipaje-bodega">Equipaje de Bodega:</label>
                 <input type="checkbox" id="equipaje-bodega">
+                <div id="return-date-container" style="display: none;">
+                    <label for="return-date">Fecha de Regreso:</label>
+                    <input type="date" id="return-date">
+                </div>
                 <button type="submit">Reservar</button>
             </form>
         </div>

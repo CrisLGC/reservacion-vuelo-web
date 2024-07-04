@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', () =>  {
 
         if (!validateName()) isValid = false;
         if (!validateEmail()) isValid = false;
-        if (!validateExpM()) isValid = false;
         if (!validateAddress()) isValid = false;
         if (!validateCity()) isValid = false;
         if (!validateCountry()) isValid = false;
@@ -37,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () =>  {
         if (!validateCardHolder()) isValid = false;
         if (!validateCardNumber()) isValid = false;
         if (!validateExpiryYear()) isValid = false;
+        if (!validateExpM()) isValid = false;
         if (!validateCVV()) isValid = false;
 
         submitBtn.disabled = !isValid;

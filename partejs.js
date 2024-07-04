@@ -8,8 +8,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const botonVerpasajeros = document.getElementById('ver-pasajeros');
     const pasajerosList = document.getElementById('pasajeros-list');
     const bppago = document.getElementById('ppago');
+    const flightTypeSelect = document.getElementById('flight-type');
+    const returnDateContainer = document.getElementById('return-date-container');
+    const returnDateInput = document.getElementById('return-date');
 
     let pasajeros = [];
+
+    flightTypeSelect.addEventListener('change', () => {
+        if (flightTypeSelect.value === 'ida-vuelta') {
+            returnDateContainer.style.display = 'block';
+            returnDateInput.required = true;
+        } else {
+            returnDateContainer.style.display = 'none';
+            returnDateInput.required = false;
+        }
+    });
     
     asientos.forEach(asiento => {
         asiento.addEventListener('click', () => {
@@ -60,11 +73,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const nacionalidad = document.getElementById('nacionalidad').value;
         const asientoclass = document.getElementById('asiento').className;
         let precio = 105.00;
-
-
-
-
-
+        const flightType= flightTypeSelect.value;
+        if (flightType === 'ida-vuelta') {
+            precio = precio*2
+        }
 
         const nameRegex = /^[a-zA-Z\s]+$/;
         if (!nameRegex.test(primernom)) {
@@ -132,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const asiento = document.getElementById(asientoId);
         if (asiento && !asiento.classList.contains('reserved')) {
             asiento.classList.add('reserved');
-            pasajeros.push({ primernom, primerape, asientoId, equipajemano, equipajebodega, precio});
+            pasajeros.push({ primernom, primerape, asientoId, equipajemano, equipajebodega, flightType, precio});
             alert(`Asiento ${asientoId} reservado para ${primernom+" "+primerape}`);
             document.getElementById('primer-nom').value = "";
             document.getElementById('primer-ape').value = "";
@@ -176,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
         pasajerosList.innerHTML = '<h2>Lista de Pasajeros</h2>';
         let total = 0;
         pasajeros.forEach(pasajero => {
-            pasajerosList.innerHTML += `<p>${pasajero.primernom} ${pasajero.primerape} - ${pasajero.asientoId} - ${pasajero.precio}.00$ </p>`;
+            pasajerosList.innerHTML += `<p>${pasajero.primernom} ${pasajero.primerape} - ${pasajero.asientoId}- ${pasajero.flightType} - ${pasajero.precio}.00$ </p>`;            
             total += pasajero.precio;
         });
         pasajerosList.innerHTML += `<div>Total a pagar: ${total}.00$</div>`;
