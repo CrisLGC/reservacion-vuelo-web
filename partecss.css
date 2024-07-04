@@ -18,6 +18,7 @@ h1, h2 {
     position: relative;
     top: 50px ;
     left: 650px;
+    box-shadow: 0 10px 25px black;
     
 
 }
@@ -36,6 +37,7 @@ h1, h2 {
     left: 25px;
     padding: 20px;
     color: white;
+    box-shadow: 0 10px 15px black;
 
 
 }
@@ -165,6 +167,7 @@ button {
     top: -1690px;
     left: 865px;
     color: white;
+    box-shadow: 0 10px 15px black;
 }
 .boton-cancelar{
     height: 200px;
@@ -175,6 +178,7 @@ button {
     top: -1050px;
     left: 450px;
     color: white;
+    box-shadow: 0 10px 15px black;
 }
 
 

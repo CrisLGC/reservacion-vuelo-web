@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     botonVerpasajeros.addEventListener('click', () => {
-        pasajerosList.innerHTML = '<h2>Lista de Pasajeros</h2>';
+        pasajerosList.innerHTML = '<h2>Lista de reservas</h2>';
         let total = 0;
         pasajeros.forEach(pasajero => {
             pasajerosList.innerHTML += `<p>${pasajero.primernom} ${pasajero.primerape} - ${pasajero.asientoId}- ${pasajero.flightType} - ${pasajero.precio}.00$ </p>`;            
