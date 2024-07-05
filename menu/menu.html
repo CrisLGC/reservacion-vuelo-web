@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abu Dhabi Flights</title>
     <link rel="stylesheet" href="menu.css">
+    <link rel="shortcut icon" href="../Imagenes/airlinelogo.png" type="image/x-icon">
 </head>
 <body>
     
@@ -13,39 +14,39 @@
             <h1>Abu Dhabi Flights</h1>
         </nav>
     </header>
-    <h2>Abu Dhabi Flights</h2>
-<div class="box-main">
-    <div class="box-1">
-    <div class="pais-partida">
-        <form id="paises">
-            <label class="partida" for="pais-partida">Pais de partida</label>
-            <select id="ida" required>
-                <option value="Caracas-Venezuela">Caracas-Venezuela</option>
-            </select>        
-        </form>
+    <div class="box-main">
+        <img src="../Imagenes/logo_web.png" alt="Logo" id="logoimg">
+        <div class="box-mayor">
+            <div class="box-dos">
+                <div class="box-1">
+                    <div class="pais-partida">
+                        <form id="paises">
+                            <label class="subtitulo" for="pais-partida">Pais de partida</label>
+                            <select id="ida" required>
+                                <option value="Caracas-Venezuela">Caracas-Venezuela</option>
+                            </select>        
+                        </form>
+                    </div>
+                </div>
+                    <div class="box-2">
+                        <div class="pais-llegada"> 
+                        <form id ="paises">
+                            <label class="subtitulo" for="pais-llegada">Pais de destino</label>
+                        <select id="vuelta" required>
+                            <option value="Dubai-Abu Dhabi">Dubai-Abu Dhabi</option>
+                        </select>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="box-3">
+                
+                <button type="submit" id="res">Reservar</button>
+                
+            </div>
+        </div>
     </div>
-    </div>
-    <div class="box-2">
-    <div class="pais-llegada"> 
-        <form id ="paises">
-        <label class="destino" for="pais-llegada">Pais de destino</label>
-        <select id="vuelta" required>
-            <option value="Dubai-Abu Dhabi">Dubai-Abu Dhabi</option>
-        </select>
-        </form>
-    </div>
-    </div>
-
-    <div class="box-3">
-    <div class="boton">
-        <div class="contenedorbr">
-            <button type="submit" id="res">Reservar</button>
-    </div>
-    </div>  
-    </div>
-</div>
-<script src="menu.js" type ="module"></script>
-
+    <script src="menu.js" type ="module"></script>
 </body>
 </html>
 

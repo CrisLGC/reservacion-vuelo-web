@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     background-image: url(''); /* Reemplaza con la ruta de tu imagen */
     background-size: cover; /* Ajusta el tamaño para cubrir todo el fondo */
     background-repeat: no-repeat; /* Evita que se repita la imagen */
@@ -87,7 +87,7 @@ h1, h2 {
     margin: 5px;
     padding: 13px;
     font-size: 10px;
-    background-color: red;
+    background-color:#cc544e  ;
     color: black;
     display: flex;
     align-items: center;
@@ -116,7 +116,7 @@ h1, h2 {
     margin: 5px;
     padding: 13px;
     font-size: 10px;
-    background-color: yellow;
+    background-color: rgb(207, 151, 28);
     color: black;
     display: flex;
     align-items: center;
@@ -138,6 +138,7 @@ h1, h2 {
     color: black
 }
 form {
+    
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -166,6 +167,7 @@ button {
     top: -1690px;
     left: 865px;
     color: white;
+    border-radius: 2px;
 }
 .boton-cancelar{
     height: 210px;
@@ -173,7 +175,7 @@ button {
     background-color: black;
     opacity: 0.55;
     position: relative;
-    top: -917px;
+    top: -825px;
     left: 450px;
     color: white;
 }
@@ -199,5 +201,19 @@ button {
 }
 ul li{
     display: inline-block;
+}
+
+.boton{
+    background-color: #cc544e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
 }
 

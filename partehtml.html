@@ -6,6 +6,7 @@
     <title>Reservación de Vuelo</title>
     <link rel="stylesheet" href="partecss.css">
     <link rel="stylesheet" href="pantalladecarga.css">
+    <link rel="shortcut icon" href="Imagenes/airlinelogo.png" type="image/x-icon">
 </head>
 <body class="hidden">
     <div class="windows8" id="onload">
@@ -397,19 +398,19 @@
                 <h2>Cancelar Reservación</h2>
                 <label for="cancel-asiento">Asiento:</label>
                 <input type="text" id="cancel-asiento" required>
-                <button type="submit">Cancelar</button>
+                <button type="submit" class="boton">Cancelar</button>
             </form>
         </div>
 
         <div class="contenedorbvp">
-            <button id="ver-pasajeros">Ver Pasajeros</button>
-            <button id="ppago">Pasar a pagar</button>
+            <button id="ver-pasajeros" class="boton">Ver reservas</button>
+            <button id="ppago" class="boton">Pasar a pagar</button>
         <div id="pasajeros-list"></div>
     </div>
     <div class="leyenda">
         <ul>
-            <li><a style="color: red;">Clase vip</a></li>
-            <li><a style="color: yellow;">Clase Bussines</a></li>
+            <li><a style="color: #cc544e ;">Clase vip</a></li>
+            <li><a style="color: rgb(207, 151, 28)  ;">Clase Bussines</a></li>
             <li><a style="color: white">Clase economica</a></li>
             <li><a style="color: gray">Asientos reservados</a></li>
         </ul>
